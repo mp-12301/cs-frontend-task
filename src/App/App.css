@@ -1,0 +1,10 @@
+:local(.main) {
+  color: #EEE;
+  font-size: 100%;
+  font-family: Helvetica;
+}
+
+html {
+  background: url("../common/assets/background.png") no-repeat center center fixed; 
+  background-size: cover;
+}

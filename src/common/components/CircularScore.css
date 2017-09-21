@@ -1,0 +1,70 @@
+:root {
+  --center: {
+    position: absolute;
+    margin: auto;
+    left:0; 
+    right:0;
+    top:0; 
+    bottom:0;
+  }
+}
+
+@keyframes progress {
+  0% {
+    stroke-dasharray: 0 100;
+  }
+}
+
+:local(.circularData) {
+  width: 150px;
+  height: 150px;
+}
+
+:local(.circularContainer) {
+  @apply --center;
+  @media (width > 500px) {
+    width: 300px;
+    height: 300px;
+  }
+  @media (width <= 500px) {
+    width: 65%;
+    height: 60%;
+    min-height: 60%;
+    min-width: 65%;
+  }
+}
+
+:local(.circularData) {
+  text-align: center;
+  color: #EEE;
+  font-size: 100%;
+  font-family: Helvetica;
+  @apply --center;
+}
+
+:local(.score) {
+  font-size: 500%;
+  font-weight: lighter;
+  color: #4CC790;
+}
+
+:local(.maxScore) {
+  font-weight: bold;
+}
+
+:local(.circleBackground) {
+  fill: none;
+}
+
+:local(.circularChart) {
+  width: 100%;
+  @apply --center;
+}
+
+:local(.circle) {
+  stroke: #4CC790;
+  fill: none;
+  stroke-width: 0.4;
+  stroke-linecap: round;
+  animation: progress 1s ease-out forwards;
+}
