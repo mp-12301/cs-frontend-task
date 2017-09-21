@@ -28,10 +28,6 @@ module.exports = {
     rules: [
       { test: /\.jsx?$/, exclude: /node_modules/, use: "babel-loader" },
       { test: /\.(png|jpg|gif)$/, use: "file-loader" },
-      {
-        test: /\.(ttf|otf|eot|svg|woff(2)?)(\?[a-z0-9]+)?$/,
-        loader: "file-loader?name=fonts/[name].[hash].[ext]",
-      },
     ],
   },
 };
